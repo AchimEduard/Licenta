@@ -19,10 +19,10 @@ controler = Controller.Controller(service)
 app = flk.Flask(__name__)
 cors.CORS(app)
 app.config['JSON_SORT_KEYS'] = False
-app.config['MAIL_SERVER']='smtp.mail.yahoo.com'
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'eduard.nicolae1@yahoo.com'
-app.config['MAIL_PASSWORD'] = '20Eduard05'
+app.config['MAIL_SERVER']='smtp.mailtrap.io'
+app.config['MAIL_PORT'] = 2525
+app.config['MAIL_USERNAME'] = '0c707c822e4fe0'
+app.config['MAIL_PASSWORD'] = 'afbabd25c97efa'
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 mail = flask_mail.Mail(app)
