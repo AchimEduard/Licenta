@@ -19,10 +19,10 @@ controler = Controller.Controller(service)
 app = flk.Flask(__name__)
 cors.CORS(app)
 app.config['JSON_SORT_KEYS'] = False
-app.config['MAIL_SERVER']='smtp.mailtrap.io'
-app.config['MAIL_PORT'] = 2525
-app.config['MAIL_USERNAME'] = '0c707c822e4fe0'
-app.config['MAIL_PASSWORD'] = 'afbabd25c97efa'
+app.config['MAIL_SERVER']='smtp.mail.yahoo.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'eduard.nicolae1@yahoo.com'
+app.config['MAIL_PASSWORD'] = '20Eduard05'
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 mail = flask_mail.Mail(app)
@@ -62,7 +62,7 @@ def traindetailspage():
 
                 controler.update_train_details(json_values.get('train_id'), json_values.get('depart'), json_values.get('arrival'))
                 msg = flask_mail.Message('Please confirm ', sender='peter@mailtrap.io', recipients=[json_values["email"]])
-                msg.body = "Please confirm at the address: 127.0.0.1:5000/confirmation?id=" + comanda_id
+                msg.body = "Please confirm at the address: https://licensefortheises.azurewebsites.net/confirmation?id=" + comanda_id
                 mail.send(msg)
                 print("Message sent!")
                 return("okay")
