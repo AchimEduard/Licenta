@@ -61,7 +61,7 @@ def traindetailspage():
                                         json_values.get('email'), json_values.get('tip_calator'), comanda_id, json_values.get('date')):
 
                 controler.update_train_details(json_values.get('train_id'), json_values.get('depart'), json_values.get('arrival'))
-                msg = flask_mail.Message('Please confirm ', sender='peter@mailtrap.io', recipients=[json_values["email"]])
+                msg = flask_mail.Message('Please confirm ', sender='TrainTicketReservation@mailtrap.com', recipients=[json_values["email"]])
                 msg.body = "Please confirm at the address: https://licensefortheises.azurewebsites.net/confirmation?id=" + comanda_id
                 mail.send(msg)
                 print("Message sent!")
