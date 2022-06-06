@@ -6,7 +6,7 @@ from sqlalchemy.orm import declarative_base, Session
 from sqlalchemy.orm import relationship
 
 Base = declarative_base()
-engine = create_engine('postgresql://postgres:20Eduard05@serverpentrulicenta.postgres.database.azure.com:5432/postgres?sslmode=require', echo=True)
+engine = create_engine('postgresql://postgres:ParolaPentruLicenta123@serverpentrulicenta.postgres.database.azure.com:5432/postgres?sslmode=require', echo=True)
 session = Session(engine, future=True)
 
 class TrainRoutesAdults(Base):
